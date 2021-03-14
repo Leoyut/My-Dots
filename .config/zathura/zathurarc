@@ -42,3 +42,20 @@ map J zoom out
 map i recolor
 set recolor                     true
 map p print
+
+
+
+# Rest of your configs go here:
+
+set adjust-open width
+set pages-per-row 1
+# set smooth-scroll true
+set selection-clipboard clipboard
+set incremental-search true
+set guioptions ""
+
+set window-title-home-tilde true
+set window-title-basename true
+set statusbar-home-tilde true
+set show-hidden true
+
