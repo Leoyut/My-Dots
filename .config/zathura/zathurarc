@@ -53,6 +53,7 @@ set pages-per-row 1
 set selection-clipboard clipboard
 set incremental-search true
 set guioptions ""
+set sandbox none
 
 set window-title-home-tilde true
 set window-title-basename true
