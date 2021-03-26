@@ -2,7 +2,7 @@
 window:
   dimensions:
     columns: 80
-    lines: 24
+    lines: 25
   padding:
     x: 25
     y: 25
