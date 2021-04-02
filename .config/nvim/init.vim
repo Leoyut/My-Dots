@@ -1,105 +1,113 @@
-" Vim Config - Minimal
-" ---------------------
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"             GENERAL CONFIGURATION             "
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = "\<Space>"
 
-" Set compatibility to Vim only.
-set nocompatible
+" Set encoding
+set encoding=utf8
 
-"Always show current position
+" Set colorscheme
+set termguicolors
+colorscheme iceburg
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Enable ruler
 set ruler
 
-" Turn on syntax highlighting.
-syntax on
+"Display 8 lines above/below the cursor when scrolling 
+set scrolloff=8
 
-"Plug 'ayu-theme/ayu-vim' " or other package manager
+" Enable numbering of lines
+set number 
 
-" Turn off modelines
-set modelines=0
+"To show on which line I'm on 
+set relativenumber
 
-" Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
-" set textwidth=80
-set formatoptions=tcqrn1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+" Enable syntax highlighting
+syntax enable
+
+" Enable auto indention
+set ai
+
+" Enable smart indention
+set si
+
+" Use spaces instead of tabs
 set expandtab
-set noshiftround
 
-" Ignore case when searching
-set ignorecase
+" Make tabs smarter
+set smarttab
 
-" When searching try to be smart about cases 
-set smartcase
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
 
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Display 5 lines above/below the cursor when scrolling with a mouse.
-set scrolloff=5
-" Fixes common backspace problems
-set backspace=indent,eol,start
-
-" Display options
-set showmode
-set showcmd
-set cmdheight=1
-
-" Highlight matching pairs of brackets. Use the '%' character to jump between them.
-set matchpairs+=<:>
-
-" Display different types of white spaces.
-"set list
-"set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
-" Show line numbers
-"set number
-highlight LineNr ctermfg=red
-
-" Set status line display
-set laststatus=2
-hi User1 ctermfg=none ctermbg=0
-hi User2 ctermfg=1 ctermbg=none
-hi User3 ctermfg=0 ctermbg=1
-hi User4 ctermfg=1 ctermbg=0
-hi User5 ctermfg=6 ctermbg=none
-hi User6 ctermfg=0 ctermbg=6
-hi User7 ctermfg=0 ctermbg=none
-hi User8 ctermfg=6 ctermbg=0
-hi User9 ctermfg=none ctermbg=none
-
-set statusline=
-set statusline+=%2*%3*%f%4*
-set statusline+=\ %1*\ %1*%{mode()}
-set statusline+=%1*\ %m%7*
-set statusline+=%9*%=
-set statusline+=\ %7*%1*\ %v:%l\/%L
-set statusline+=\ %8*%6*\ %Y\ %5*
-
-" Encoding
-set encoding=utf-8
-
-" Highlight matching search patterns
+" Highlight search results
 set hlsearch
 
-" Enable incremental search
-set incsearch
+" Makes search act like search in modern browsers
+set incsearch 
 
-" Include matching uppercase words with lowercase search term
-set ignorecase
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
 
-" Include only uppercase words with uppercase search term
-set smartcase
+" Turn off backups (cause I hate em)
+set nobackup
 
-" Store info from no more than 100 files at a time, 9999 lines of text
-" 100kb of data. Useful for copying large amounts of data between files.
-set viminfo='100,<9999,s100
+" Turn off second status bar
+set noshowmode
 
-set relativenumber
-set nu
-set smartindent
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"             FLOATERM CONFIGURATION            "
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+highlight FloatermBorder guibg=#13141d
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"            BUFFERLINE CONFIGURATION           "
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+highlight BufferLineFill guibg=NONE
+
+"to split the window to right
+set splitbelow splitright
+set hidden
+set noswapfile
+set undodir=~/.vim/undodir1
+set undofile
+
+" Remap splits navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Make adjusing split sizes a bit more friendly
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
+highlight VertSplit cterm=NONE ctermbg=black ctermfg=black 
+
+"Set status line display
+set laststatus=2
+set statusline=
+set statusline+=\ %l
+set statusline+=\ %*
+set statusline+=\ ‹‹
+set statusline+=\ %f\ %*
+set statusline+=\ ››
+set statusline+=\ %m
+set statusline+=%=
+set statusline+=\ ‹‹
+set statusline+=\ %v:%l\/%L
+set statusline+=\ ::
+set statusline+=\ %n
+set statusline+=\ ››\ %*
