@@ -25,55 +25,15 @@ for_window [class=".*"] border pixel 4
 #client.background            #13141D
 
 ################### COLORS ###################### {{{
+# Colour of border, background, text, indicator, and child_border
+#                            border     bg     text   indi.  chi. bdr
+client.focused               #13141D #13141D #84A0C6 #13141D #13141D
+client.focused_inactive      #13141D #13141D #84A0C6 #13141D #13141D
+client.unfocused             #13141D #13141D #84A0C6 #13141D #13141D
+client.urgent                #13141D #13141D #84A0C6 #13141D #13141D
+client.placeholder           #13141D #13141D #84A0C6 #13141D #13141D
+client.background            #13141D
 
-# Set Colors
-set $hc-color #FFFFFF
-set $bg-color #262626
-set $sc-color #FFFFFF
-set $fg-color #FFFFFF
-# Black + DarkGrey
-set $color0   #262626
-set $color8   #928374
-# DarkRed + Red
-set $color1   #cc241d
-set $color9   #fb4934
-# DarkGreen + Light Green
-set $color2   #98971a
-set $color10  #b8bb26
-# DarkYellow + Yellow
-set $color3   #d79921
-set $color11  #fabd2f
-# DarkBlue + Blue
-set $color4   #458588
-set $color12  #83a598
-# DarkMagenta + FFFFFF
-set $color5   #b16286
-set $color13  #d3869b
-# DarkCyan + Cyan
-set $color6   #689d6a
-set $color14  #8ec07c
-# LightGrey + White
-set $color7   #a89984
-set $color15  #ebdbb2
-# Border
-set $color16 #404040
-
-# set $borderInactive #928374
-set $borderInactive #403a37
-set $borderActive   #504945
-
-# Window Colors
-#			Border		  Background          Text              Indicator
-client.focused          $borderActive     $borderActive       $borderActive     $borderActive
-client.focused_inactive $borderInactive   $borderInactive     $borderInactive   $borderInactive
-client.unfocused        $borderInactive   $borderInactive     $borderInactive   $borderInactive
-client.urgent           $color9   	  $color9	      $color9    	$color9
-client.background       $bg-color
-
-#}}}
-
-# Setup rounded corners
-# border_radius 5
 
 # Add title bar
 font pango:Fantasque Sans Mono 9
@@ -87,7 +47,7 @@ exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id picom -CGb
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id hsetroot -fill "$HOME/Pictures/gruv.png"
+exec_always --no-startup-id hsetroot -fill "$HOME/Pictures/Wallpapers/Shore.jpg"
 exec_always --no-startup-id xsettingsd
 exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
@@ -100,10 +60,10 @@ bindsym $mod+Return exec alacritty
 # ##############################################################################
 
 # Open application menu
-bindsym $mod+Shift+Return exec sh $HOME/.local/bin/menus/appmenu
+bindsym $mod+d  exec sh $HOME/.local/bin/menus/appmenu
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+Return exec --no-startup-id rofi -show run
 
 # Open eww
 bindsym $mod+p exec sh $HOME/.local/bin/dshbrd open
