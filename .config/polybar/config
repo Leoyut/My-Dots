@@ -35,6 +35,9 @@ radius = 0.0
 fixed-center = true
 bottom = false
 
+#to hide the polybar when using alt+f
+enable-ipc = true
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
