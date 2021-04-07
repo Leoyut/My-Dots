@@ -150,6 +150,10 @@ bindsym $alt+Shift+f exec sh $HOME/.local/bin/tglbar show
 # Change container layout split
 bindsym $mod+s layout toggle split
 
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+e layout stacking
+bindsym $mod+w layout tabbed
+
 # Toggle tiling / floating
 bindsym $mod+space floating toggle
 
@@ -269,3 +273,14 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(d
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+#focus parent and move left/right
+bindsym $mod+Mod1+j focus parent; focus left
+bindsym $mod+Mod1+Left focus parent; focus left
+bindsym $mod+Mod1+semicolon focus parent; focus right
+bindsym $mod+Mod1+Right exec focus parent; focus right
