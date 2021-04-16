@@ -29,6 +29,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-clangd',
   \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -259,3 +260,4 @@ let g:clang_format#style_options = {
             \ "Standard" : "C++11"}
 
 "            \"BreakBeforeBraces": "Stroustrup",
+

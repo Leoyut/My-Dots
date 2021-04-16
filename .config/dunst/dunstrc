@@ -131,7 +131,7 @@
     max_icon_size = 40
 
     # Paths to default icons.
-    icon_path = /home/kizu/.icons/Horizon/16x16/status/:/home/kizu/.icons/Horizon/16x16/devices/:/home/kizu/.icons/Horizon/16x16/apps/
+    icon_path = /home/cool/.icons/Horizon/16x16/status/:/home/cool/.icons/Horizon/16x16/devices/:/home/cool/.icons/Horizon/16x16/apps/
 
 [shortcuts]
     close = ctrl+space

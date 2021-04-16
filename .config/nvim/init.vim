@@ -120,7 +120,7 @@ set undofile
 
 "Color Settings
 colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_dark='hard'
 set background=dark
 highlight LineNr ctermfg=darkgrey
 highlight clear CursorLineNr

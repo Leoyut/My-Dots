@@ -8,7 +8,7 @@
     foregroundcolorinverse: #ebdbb2;
     selectioncolor: #504945;
 
-    font: "Iosevka Custom 10";
+    font: "Iosevka Custom 12";
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;
@@ -32,7 +32,7 @@
     border-color: @separatorcolor;
     border: 4;
     border-radius: 0;
-    width: 900;
+    width: 600;
 }
 
 #mainbox {
