@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/cool/.vscode'
+let g:netrw_dirhist_8='/home/cool/dots/.vscode'
 let g:netrw_dirhist_7='/home/cool/dots/.config/alacritty'
 let g:netrw_dirhist_6='/home/cool/.config/picom'
 let g:netrw_dirhist_5='/home/cool/dots/.config/kitty'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_3='/home/cool/.local/bin/menus'
 let g:netrw_dirhist_2='/home/cool/.config/kitty'
 let g:netrw_dirhist_1='/home/cool/Desktop/c++'
 let g:netrw_dirhist_0='/home/cool/Backup/.config/polybar'
-let g:netrw_dirhist_9='/home/cool/colors'
-let g:netrw_dirhist_8='/home/cool/.config/polybar'

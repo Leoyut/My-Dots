@@ -4,10 +4,9 @@
   "editor.suggestSelection": "first",
   "editor.minimap.enabled": true,
   "editor.detectIndentation": true,
-  "editor.fontFamily": "Hack Regular",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.visible": true,
-  "workbench.panel.defaultLocation": "right",
+  "workbench.panel.defaultLocation": "bottom",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -170,7 +169,7 @@
   "files.associations": {
     "*.wml": "html"
   },
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "PragmataPro Mono",
   "omnisharp.useGlobalMono": "always",
   "csharp.semanticHighlighting.enabled": true,
   "workbench.statusBar.visible": false,
