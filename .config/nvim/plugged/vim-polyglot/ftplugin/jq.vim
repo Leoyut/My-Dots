@@ -1,1 +1,5 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/jq.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'jq', 'ftplugin/jq.vim')
+  finish
+endif
+
+setlocal commentstring=#%s

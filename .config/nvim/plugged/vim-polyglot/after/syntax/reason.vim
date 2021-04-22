@@ -1,1 +1,4 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/after/syntax/reason.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'reason', 'after/syntax/reason.vim')
+  finish
+endif
+

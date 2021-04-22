@@ -1,1 +1,4 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/pest.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'pest', 'ftplugin/pest.vim')
+  finish
+endif
+

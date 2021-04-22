@@ -1,1 +1,8 @@
-/home/cool/.config/nvim/plugged/nerdtree/.github/ISSUE_TEMPLATE/feature_request.md
+---
+name: "Feature Request"
+about: "What new feature are you requesting for NERDTree?"
+labels: "feature request"
+---
+
+#### Description
+

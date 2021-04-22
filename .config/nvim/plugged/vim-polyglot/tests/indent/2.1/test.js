@@ -1,1 +1,10 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/tests/indent/2.1/test.js
+// File with 2-spaces indentation
+function foobar() {
+  foo = bar
+  while (true) {
+    fizfuz()
+    fizfuz()
+    fizfuz()
+    fizfuz()
+  }
+}

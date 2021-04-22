@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/nerdtree/.gitignore
+*~
+*.swp
+tags

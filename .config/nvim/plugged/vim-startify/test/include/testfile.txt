@@ -1,1 +1,2 @@
-/home/cool/.config/nvim/plugged/vim-startify/test/include/testfile.txt
+This is just a simple test file.
+Foo, bar, quux.

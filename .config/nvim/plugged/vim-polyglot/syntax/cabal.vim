@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/syntax/cabal.vim
+" Polyglot metafile
+source <sfile>:h/cabal-1.vim
+source <sfile>:h/cabal-2.vim

@@ -1,1 +1,11 @@
-/home/cool/.config/nvim/plugged/vim-startify/.travis.yml
+os:
+  - linux
+  - osx
+
+addons:
+  apt:
+    packages:
+      - vim-gtk
+
+script:
+  - test/run

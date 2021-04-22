@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/.gitignore
+/tmp
+!*ctags*
+tags

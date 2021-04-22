@@ -1,1 +1,1 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftdetect/polyglot.vim
+call polyglot#init#init()

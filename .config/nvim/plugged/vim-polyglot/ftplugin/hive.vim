@@ -1,1 +1,6 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/hive.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'hive', 'ftplugin/hive.vim')
+  finish
+endif
+
+setlocal comments=:--
+setlocal commentstring=--\ %s

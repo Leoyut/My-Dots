@@ -1,1 +1,1 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/filetype.vim
+call polyglot#init#init()

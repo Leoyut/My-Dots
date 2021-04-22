@@ -1,1 +1,10 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/tests/indent/4.1/test.js
+// File with 4-spaces indentation
+function foobar() {
+    foo = bar
+    while (true) {
+        fizfuz()
+        fizfuz()
+        fizfuz()
+        fizfuz()
+    }
+}

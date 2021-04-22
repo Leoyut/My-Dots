@@ -1,1 +1,5 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/indent/jsonc.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'jsonc', 'indent/jsonc.vim')
+  finish
+endif
+
+runtime! indent/json.vim

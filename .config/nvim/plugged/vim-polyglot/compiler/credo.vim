@@ -1,1 +1,15 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/compiler/credo.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'elixir', 'compiler/credo.vim')
+  finish
+endif
+
+if exists('current_compiler')
+    finish
+endif
+let current_compiler = 'credo'
+
+if exists(":CompilerSet") != 2
+    command -nargs=* CompilerSet setlocal <args>
+endif
+
+CompilerSet errorformat=%f:%l:%c:\ %t:\ %m,%f:%l:\ %t:\ %m
+CompilerSet makeprg=mix\ credo\ suggest\ --format=flycheck

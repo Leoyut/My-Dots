@@ -1,1 +1,5 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/solidity.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'solidity', 'ftplugin/solidity.vim')
+  finish
+endif
+
+setlocal commentstring=//\ %s

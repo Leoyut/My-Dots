@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/after/indent/javascript.vim
+" Polyglot metafile
+source <sfile>:h/javascript-1.vim
+source <sfile>:h/javascript-2.vim

@@ -1,1 +1,19 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/opencl.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'opencl', 'ftplugin/opencl.vim')
+  finish
+endif
+
+if exists("b:did_ftplugin") | finish | endif
+
+if version > 600
+  runtime! ftplugin/c.vim
+endif
+
+" Smaller tab stops.
+setlocal tabstop=4
+setlocal shiftwidth=4
+
+" Smart tabbing/indenting
+setlocal smarttab
+setlocal smartindent
+
+let b:did_ftplugin = 1

@@ -1,1 +1,5 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/raml.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'raml', 'ftplugin/raml.vim')
+  finish
+endif
+
+set ts=2 sts=2 sw=2 et

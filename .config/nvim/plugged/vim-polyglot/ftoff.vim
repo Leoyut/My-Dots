@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftoff.vim
+if exists("did_load_polyglot")
+  unlet did_load_polyglot
+endif

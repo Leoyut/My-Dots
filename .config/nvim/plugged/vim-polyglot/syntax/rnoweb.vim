@@ -1,1 +1,3 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/syntax/rnoweb.vim
+" Polyglot metafile
+source <sfile>:h/rnoweb-1.vim
+source <sfile>:h/rnoweb-2.vim

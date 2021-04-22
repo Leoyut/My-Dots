@@ -1,1 +1,7 @@
-/home/cool/.config/nvim/plugged/vim-polyglot/ftplugin/oasis.vim
+if polyglot#init#is_disabled(expand('<sfile>:p'), 'ocaml', 'ftplugin/oasis.vim')
+  finish
+endif
+
+
+setlocal comments=:#
+setlocal commentstring=#\ %s
