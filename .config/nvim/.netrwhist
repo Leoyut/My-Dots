@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/cool/.mozilla/firefox'
+let g:netrw_dirhist_1='/home/cool/.config/mutt/accounts'
+let g:netrw_dirhist_0='/home/cool/.config/mutt'
+let g:netrw_dirhist_9='/home/cool/.config/mutt/accounts'
+let g:netrw_dirhist_8='/home/cool/.config/mutt'
+let g:netrw_dirhist_7='/home/cool/.config/mutt/accounts'
+let g:netrw_dirhist_6='/home/cool/mutt1'
+let g:netrw_dirhist_5='/home/cool/.local/share/mail/135gowtam.sai@gmail.com'
+let g:netrw_dirhist_4='/home/cool/.config/mutt/accounts'
+let g:netrw_dirhist_3='/home/cool/.config/mutt'
