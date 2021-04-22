@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-one/autoload/airline/themes/one.vim

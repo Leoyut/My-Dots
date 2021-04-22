@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/indent-blankline.nvim/doc/indent_blankline.txt

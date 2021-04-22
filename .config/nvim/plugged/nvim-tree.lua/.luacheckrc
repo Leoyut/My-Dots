@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nvim-tree.lua/.luacheckrc

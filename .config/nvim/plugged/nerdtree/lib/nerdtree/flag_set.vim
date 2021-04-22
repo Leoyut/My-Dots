@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nerdtree/lib/nerdtree/flag_set.vim

@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-startify/syntax/startify.vim

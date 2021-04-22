@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-polyglot/after/compiler/tex.vim

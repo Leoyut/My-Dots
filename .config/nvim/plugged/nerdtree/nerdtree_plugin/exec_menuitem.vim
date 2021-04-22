@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nerdtree/nerdtree_plugin/exec_menuitem.vim

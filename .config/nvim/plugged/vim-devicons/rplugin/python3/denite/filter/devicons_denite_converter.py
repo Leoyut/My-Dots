@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-devicons/rplugin/python3/denite/filter/devicons_denite_converter.py

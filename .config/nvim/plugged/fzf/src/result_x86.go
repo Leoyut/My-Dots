@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/fzf/src/result_x86.go

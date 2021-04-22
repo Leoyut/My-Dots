@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-nerdtree-syntax-highlight/after/syntax/nerdtree.vim

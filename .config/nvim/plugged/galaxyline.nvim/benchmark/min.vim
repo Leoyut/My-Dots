@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/galaxyline.nvim/benchmark/min.vim

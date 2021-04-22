@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nerdtree/lib/nerdtree/tree_dir_node.vim

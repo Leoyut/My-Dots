@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/coc.nvim/autoload/health/coc.vim

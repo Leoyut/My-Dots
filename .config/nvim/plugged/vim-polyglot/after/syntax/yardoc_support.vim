@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-polyglot/after/syntax/yardoc_support.vim

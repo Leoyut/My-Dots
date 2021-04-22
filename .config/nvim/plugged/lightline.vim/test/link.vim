@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/lightline.vim/test/link.vim

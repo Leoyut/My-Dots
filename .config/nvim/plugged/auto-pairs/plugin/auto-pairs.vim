@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/auto-pairs/plugin/auto-pairs.vim

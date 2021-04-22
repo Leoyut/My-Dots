@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/palenight.vim/autoload/lightline/colorscheme/palenight.vim

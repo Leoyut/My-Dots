@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-devicons/pythonx/vim_devicons/powerline/__init__.py

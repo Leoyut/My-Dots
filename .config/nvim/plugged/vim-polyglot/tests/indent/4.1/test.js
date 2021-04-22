@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-polyglot/tests/indent/4.1/test.js

@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/fzf.vim/bin/tagpreview.sh

@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/palenight.vim/colors/palenight.vim

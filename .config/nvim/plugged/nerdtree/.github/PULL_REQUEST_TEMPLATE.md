@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nerdtree/.github/PULL_REQUEST_TEMPLATE.md

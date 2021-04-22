@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/nvim-web-devicons/plugin/nvim-web-devicons.vim

@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/fzf/plugin/fzf.vim

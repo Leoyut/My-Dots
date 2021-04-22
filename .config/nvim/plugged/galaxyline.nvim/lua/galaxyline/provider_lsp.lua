@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/galaxyline.nvim/lua/galaxyline/provider_lsp.lua

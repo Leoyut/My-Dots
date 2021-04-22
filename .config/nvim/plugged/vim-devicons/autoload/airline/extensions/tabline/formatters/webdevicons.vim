@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-devicons/autoload/airline/extensions/tabline/formatters/webdevicons.vim

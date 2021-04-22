@@ -1,0 +1,1 @@
+/home/cool/.config/nvim/plugged/vim-devicons/nerdtree_plugin/webdevicons.vim
