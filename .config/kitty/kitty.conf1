@@ -6,12 +6,12 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-	font_family      JetBrainsMono Medium Nerd Font Mono
+	font_family      PragmataPro Mono Liga
 #:  font_family      Space Mono Bold for Powerline			
 #:	bold_font        Space Mono Bold for Powerline
-	bold_font        JetBrains Mono Extra Bold Nerd Font Complete
-	italic_font      auto
-	bold_italic_font JetBrains Mono ExtBd Ita Nerd Font Complete
+	bold_font        PragmataPro Mono Liga
+	italic_font      PragmataPro Mono Liga
+	bold_italic_font PragmataPro Mono Liga
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty

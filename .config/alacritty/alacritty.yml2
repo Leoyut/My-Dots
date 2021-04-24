@@ -1,8 +1,8 @@
  # Window Customization
 window:
-  dimensions:
-    columns: 80
-    lines: 24
+  #dimensions:
+    #columns: 80
+    #lines: 24
   padding:
     x: 24
     y: 10
@@ -16,13 +16,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: PragmataPro Mono
+    family: PragmataPro Mono Liga
     style: Regular
   bold:
-    family: PragmataPro Mono
+    family: PragmataPro Mono Liga
     style: Bold
   italic:
-    family: PragmataPro Mono
+    family: PragmataPro Mono Liga
     style: Italic
   size: 11
   offset:
