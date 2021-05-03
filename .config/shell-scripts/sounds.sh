@@ -1,2 +1,2 @@
 #!/bin/bash
-paplay  -p ~/Music/alerts/shock.wav
+paplay  -p ~/Music/alerts/iphonenotalert.wav

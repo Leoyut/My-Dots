@@ -16,7 +16,7 @@ word_wrap = yes
 ignore_newline = no
 stack_duplicates = yes
 hide_duplicates_count = yes
-geometry = "500x100-50+100"
+geometry = "400x100-50+100"
 shrink = no
 transparency = 10
 idle_threshold = 0
@@ -105,7 +105,7 @@ icon = ~/Pictures/i3/notification.png
 background = "#32302f"
 foreground = "#ebdbb2"
 timeout = 0
-icon = ~/Pictures/i3/notification.png
+icon = ~/Pictures/i3-icons/notification.png
 
 [espeak]
 summary = "*"

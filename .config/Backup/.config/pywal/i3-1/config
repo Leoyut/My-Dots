@@ -1,0 +1,341 @@
+# ##############################################################################
+# #                            GENERAL CONFIGURATION                           #
+# ##############################################################################
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod4
+set $alt Mod1
+
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+# Add Border
+for_window [class=".*"] border pixel 2
+
+## ##############################################################################
+## #                             WINDOWS AND BORDERS                            #
+# ##############################################################################
+# Colour of border, background, text, indicator, and child_border
+#                            border     bg     text   indi.  chi. bdr
+#client.focused               #13141D #13141D #84A0C6 #13141D #13141D
+#client.focused_inactive      #13141D #13141D #84A0C6 #13141D #13141D
+#client.unfocused             #13141D #13141D #84A0C6 #13141D #13141D
+#client.urgent                #13141D #13141D #84A0C6 #13141D #13141D
+#client.placeholder           #13141D #13141D #84A0C6 #13141D #13141D
+#client.background            #13141D
+
+################### COLORS ###################### {{{
+
+# Set Colors
+set $hc-color #FFFFFF
+set $bg-color #262626
+set $sc-color #FFFFFF
+set $fg-color #FFFFFF
+# Black + DarkGrey
+set $color0   #262626
+set $color8   #928374
+# DarkRed + Red
+set $color1   #cc241d
+set $color9   #fb4934
+# DarkGreen + Light Green
+set $color2   #98971a
+set $color10  #b8bb26
+# DarkYellow + Yellow
+set $color3   #d79921
+set $color11  #fabd2f
+# DarkBlue + Blue
+set $color4   #458588
+set $color12  #83a598
+# DarkMagenta + FFFFFF
+set $color5   #b16286
+set $color13  #d3869b
+# DarkCyan + Cyan
+set $color6   #689d6a
+set $color14  #8ec07c
+# LightGrey + White
+set $color7   #a89984
+set $color15  #ebdbb2
+# Border
+set $color16 #404040
+
+# set $borderInactive #928374
+set $borderInactive #403a37
+set $borderActive   #504945
+
+# Window Colors
+#			Border		  Background          Text              Indicator
+client.focused          $borderActive     $borderActive       $borderActive     $borderActive
+client.focused_inactive $borderInactive   $borderInactive     $borderInactive   $borderInactive
+client.unfocused        $borderInactive   $borderInactive     $borderInactive   $borderInactive
+client.urgent           $color9   	  $color9	      $color9    	$color9
+client.background       $bg-color
+
+#}}}
+
+# Setup rounded corners
+# border_radius 5
+
+# Add title bar
+font pango:Fantasque Sans Mono 9
+
+title_align center
+
+for_window [class=".*"] title_format "%title"
+
+# Auto start apps
+exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom -CGb
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always --no-startup-id hsetroot -fill "$HOME/Pictures/wallhaven/wallhaven-rdqr9q.png"
+exec_always --no-startup-id "wal -i $HOME/Pictures/wallhaven/wallhaven-rdqr9q.png"
+exec_always --no-startup-id xsettingsd
+exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id autotiling
+
+# Run an Terminal
+bindsym $mod+Return exec kitty
+
+# ##############################################################################
+# #                                   KEYBINDS                                 #
+# ##############################################################################
+
+# Open application menu
+bindsym $mod+Shift+Return exec sh $HOME/.local/bin/menus/appmenu
+
+# start program launcher
+bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
+
+# Open eww
+bindsym $mod+p exec sh $HOME/.local/bin/dshbrd open
+bindsym $mod+Shift+p exec sh $HOME/.local/bin/dshbrd close
+
+# Change volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# Change brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# Kill focused widow
+bindsym $mod+c kill
+bindsym $alt+F4 kill
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split in horizontal orientation
+#bindsym $mod+h split h
+
+# Split in vertical orientation
+#bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Better fullscreen but can see window
+bindsym $alt+f exec sh $HOME/.local/bin/tglbar hide
+bindsym $alt+Shift+f exec sh $HOME/.local/bin/tglbar show
+
+# Change container layout split
+bindsym $mod+s layout toggle split
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+e layout stacking
+bindsym $mod+w layout tabbed
+
+# Toggle tiling / floating
+bindsym $mod+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+Shift+space focus mode_toggle
+
+#navigate workspaces next / previous
+bindsym $alt+Tab workspace next
+bindsym $alt+Control+Left workspace prev
+
+# Workspace names
+# to display names or symbols instead of plain workspace numbers you can use
+# something like: set $ws1 1:mail
+#                 set $ws2 2:
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+
+# Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
+ # Open applications on specific workspaces
+ assign [class=firefox|Org.gnome.Nautilus] $ws2
+ assign [class=Chromium|chrome|obs|SimpleScreenRecorder|Teams] $ws3
+ assign [class=Code] $ws4
+ assign [class=discord|Spotify] $ws6
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+for_window [class="Spotify"] move to workspace $ws6
+#for_window [class=Spotify|Chromium|firefox|obs|SimpleScreenRecorder|discord|Org.gnome.Nautilus] focus
+
+# Open specific applications in floating mode
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Clipgrab"] floating enable
+for_window [title="File Transfer*"] floating enable
+for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border normal
+for_window [title="i3_help"] floating enable sticky enable border normal
+for_window [class="Lightdm-gtk-greeter-settings"] floating enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [title="MuseScore: Play Panel"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Oblogout"] fullscreen enable
+for_window [class="octopi"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="Thus"] floating enable border normal
+for_window [class="Timeset-gui"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="(?i)virtualbox"] fullscreen enable 
+for_window [class="Xfburn"] floating enable
+
+
+# ##############################################################################
+# #                                MISCELLANEOUS                               #
+# ##############################################################################
+
+# Restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# Resize window (you can also use the mouse for that)
+mode "resize" {
+    bindsym Left resize shrink width 5 px or 5 ppt
+    bindsym Down resize grow height 5 px or 5 ppt
+    bindsym Up resize shrink height 5 px or 5 ppt
+    bindsym Right resize grow width 5 px or 5 ppt
+    bindsym Return mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+# Set inner/outer gaps
+gaps outer 2
+gaps inner 20
+
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/screenshots/$(date).png" && notify-send "Screenshot Saved"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/screenshots/$(date).png" && notify-send "Screenshot Saved"
+bindsym $mod+MOD1+n exec --no-startup-id maim "/home/$USER/Pictures/screenshots/$(date)" && notify-send "Screenshot Saved"
+bindsym $mod+Shift+MOD1+n exec --no-startup-id maim --select "/home/$USER/Pictures/screenshots/$(date)" && notify-send "Screenshot Saved"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+#focus parent and move left/right
+bindsym $mod+Mod1+j focus parent; focus left
+bindsym $mod+Mod1+Left focus parent; focus left
+bindsym $mod+Mod1+semicolon focus parent; focus right
+bindsym $mod+Mod1+Right exec focus parent; focus right
+
+#personal bindings
+bindsym $mod+b exec firefox
+
+#
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+Shift+z move container to workspace back_and_forth
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#walpaper bindings
+#bindsym $mod+Shift+w exec hsetroot -fill "$HOME/Pictures/Wallpapers/darkarch.png"
+#bindsym $mod+Shift+e exec hsetroot -fill "$HOME/Pictures/Wallpapers/lightarch.png"
+
+#i3-lock
+bindsym $mod+Shift+l exec bash ~/shell-scripts/./lock.sh
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
+# PROTIP: You can also dynamically set dmenu's colors this way:
+bindsym $mod+u exec dmenu_run -h 25 -nf "$fg" -sb "$bg" -sb "$bg" -sf "$fg"
+
+# i3 config.
+# ...
+
+# Cycle wallpapers and apply new colorscheme.
+bindsym $mod+q exec "wal -i $HOME/Pictures/wallhaven/ -o wal-set"
+
+#shells commands
+bindsym $mod+Shift+c exec systheme
+bindsym $mod+Shift+a exec dmconf
+

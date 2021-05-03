@@ -1,73 +1,52 @@
 #! /bin/bash
-source ~/.config/nvim/values.text
-source ~/.config/alacritty/values.text
-source ~/.config/kitty/values.text
-passwd1=satya
-echo -e "\n\t\t1)Gruvbox"
-echo -e "\n\t\t2)Iceberg\n"
-read -p "Select the theme : " arg
-echo -en "\nEnter Password : " 
-read -s passwd
-if [ "$passwd1" == "$passwd" ]
-then
-if (($arg==1))   
-then
-    if (($c==1))
-    then
-        bash ~/shell-scripts/./kitty.sh
-    fi
-    if (($b!=1))
-    then
-        bash ~/shell-scripts/./nvim.sh
-    fi
-
-    if (($a!=1)) 
-    then
-        bash ~/shell-scripts/./alacritty.sh
-    fi 
-
-    if (($arg==1))
+arg=$(echo -e "Gruvbox\nIceburg\nPywal"|rofi -dmenu -i -p 'Themes')
+echo $arg
+if [[ "$arg" = "Gruvbox" ||  $arg = 1 ]]
     then
         rm -rf ~/.config/polybar
+        rm -rf ~/.config/alacritty/*
+        rm -rf ~/.config/kitty/*
+        rm -rf ~/.config/nvim
+        rm -rf ~/.config/rofi
+        cp -r ~/Backup/.config/rofi   ~/.config/rofi
+        cp -r ~/Backup/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+        cp -r ~/Backup/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
         cp -r ~/Backup/.config/i3/config ~/.config/i3/
         cp -r ~/Backup/.config/polybar   ~/.config/
+        cp -r ~/Backup/.config/nvim   ~/.config/
         i3-msg restart
-    echo "Sys Theme : Gruvbox"
-    else
-    echo "Error Ocurred"
-    fi
+        notify-send "Theme : Gruvbox Running" 
 
-elif (($arg==2))  
+elif [[ "$arg" = "Iceburg" || $arg = 2 ]]  
 then 
-    if (($c!=1))
-    then
-        bash ~/shell-scripts/./kitty.sh
-    fi
-        if (($b==1))
-        then
-        bash ~/shell-scripts/./nvim.sh
-        fi
-        if (($a==1))
-        then
-        bash ~/shell-scripts/./alacritty.sh
-        fi
-
-        if (($arg==2))
-        then
         rm -rf ~/.config/polybar
         rm -rf ~/.config/i3/config
+        rm -rf ~/.config/alacritty/*
+        rm -rf ~/.config/kitty/*
+        rm -rf ~/.config/nvim
+        cp -r ~/Backup/.config/alacritty/alacritty.yml2 ~/.config/alacritty/alacritty.yml
+        cp -r ~/Backup/.config/kitty/kitty.conf1 ~/.config/kitty/kitty.conf
         cp -r ~/Backup/.config/i3/config-1 ~/.config/i3/config
         cp -r ~/Backup/.config/polybar1 ~/.config/polybar
+        cp -r ~/Backup/.config/nvim1   ~/.config/nvim
         i3-msg restart
-        echo "Sys Theme : Iceburg" 
-        else
-            echo "Error Ocurred"
-        fi
+        notify-send "Theme : Iceburg Running" 
+
+elif [[ "$arg" = "Pywal" || $arg = 3 ]]
+then
+        rm -rf ~/.config/polybar
+        rm -rf ~/.config/i3/config
+        rm -rf ~/.config/kitty/kitty.conf
+        rm -rf ~/.config/rofi
+        rm -rf ~/.config/nvim
+        cp -r ~/Backup/.config/pywal/kitty/kitty.conf ~/.config/kitty/kitty.conf
+        cp -r ~/Backup/.config/pywal/i3-1/config ~/.config/i3/config
+        cp -r ~/Backup/.config/pywal/polybar ~/.config/polybar
+        cp -r ~/Backup/.config/nvim1   ~/.config/nvim
+        cp -r ~/Backup/.config/pywal/rofi   ~/.config/rofi
+        i3-msg restart
+        notify-send "Theme : Pywal Running" 
 
 else
-    echo "Please Enter Correct Selection!!!!!"
-fi
-else
-    echo -e "\n\nIncorrect Password !!!!!!!!!!!"
-    exit 1
+    notify-send "Please Enter Correct Selection!!!!!"
 fi
