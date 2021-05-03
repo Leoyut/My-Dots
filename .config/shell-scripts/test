@@ -1,0 +1,53 @@
+#! /bin/bash
+passwd1=satya
+echo -e "\n\t\t1)Gruvbox"
+echo -e "\n\t\t2)Iceberg\n"
+read -p "Select the theme : " arg
+echo -en "\nEnter Password : " 
+read -s passwd
+if [ "$passwd1" == "$passwd" ]
+then
+    if (($arg==1))
+    then
+        rm -rf ~/.config/polybar
+        rm -rf ~/.config/alacritty/*
+        rm -rf ~/.config/kitty/*
+        rm -rf ~/.config/nvim
+        cp -r ~/Backup/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+        cp -r ~/Backup/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+        cp -r ~/Backup/.config/i3/config ~/.config/i3/
+        cp -r ~/Backup/.config/polybar   ~/.config/
+        cp -r ~/Backup/.config/nvim   ~/.config/
+        i3-msg restart
+    echo "Sys Theme : Gruvbox"
+    else
+    echo "Error Ocurred"
+    fi
+
+elif (($arg==2))  
+then 
+        if (($arg==2))
+        then
+        rm -rf ~/.config/polybar
+        rm -rf ~/.config/i3/config
+        rm -rf ~/.config/alacritty/*
+        rm -rf ~/.config/kitty/*
+        rm -rf ~/.config/nvim
+        cp -r ~/Backup/.config/alacritty/alacritty.yml2 ~/.config/alacritty/alacritty.yml
+        cp -r ~/Backup/.config/kitty/kitty.conf1 ~/.config/kitty/kitty.conf
+        cp -r ~/Backup/.config/i3/config-1 ~/.config/i3/config
+        cp -r ~/Backup/.config/polybar1 ~/.config/polybar
+        cp -r ~/Backup/.config/nvim1   ~/.config/
+        i3-msg restart
+        echo "Sys Theme : Iceburg" 
+        else
+            echo "Error Ocurred"
+        fi
+
+else
+    echo "Please Enter Correct Selection!!!!!"
+fi
+else
+    echo -e "\n\nIncorrect Password !!!!!!!!!!!"
+    exit 1
+fi
