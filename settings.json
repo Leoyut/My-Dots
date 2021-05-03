@@ -169,7 +169,7 @@
   "files.associations": {
     "*.wml": "html"
   },
-  "terminal.integrated.fontFamily": "PragmataPro Mono",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "omnisharp.useGlobalMono": "always",
   "csharp.semanticHighlighting.enabled": true,
   "workbench.statusBar.visible": false,

@@ -127,6 +127,13 @@ alias mail="neomutt"
 alias news="newsboat"
 alias i3conf="vi ~/.config/i3/config"
 alias ff="bash ~/shell-scripts/./find.sh"
+alias downwall="/home/cool/shell-scripts/./wallhaven.sh"
+alias picsho="bash ~/shell-scripts/pictures.sh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=196'
+
+
