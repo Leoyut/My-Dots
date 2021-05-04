@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias chvim="~/shell-scripts/./nvim.sh"
 alias vi="nvim"
 alias comp="~/shell-scripts/./c.sh"
+alias com="~/shell-scripts/./com.sh"
 alias h="htop"
 alias viconf="nvim ~/.config/nvim/init.vim"
 alias vimconf="vim ~/.vimrc"
@@ -129,6 +130,13 @@ alias i3conf="vi ~/.config/i3/config"
 alias ff="bash ~/shell-scripts/./find.sh"
 alias downwall="/home/cool/shell-scripts/./wallhaven.sh"
 alias picsho="bash ~/shell-scripts/pictures.sh"
+
+# Changing "ls" to "exa"
+alias l='exa -lah --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -167,7 +167,9 @@
     "**/.factorypath": true
   },
   "files.associations": {
-    "*.wml": "html"
+    "*.wml": "html",
+    "*.rmd": "markdown",
+    "stdio.h": "c"
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "omnisharp.useGlobalMono": "always",

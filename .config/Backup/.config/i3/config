@@ -100,7 +100,7 @@ bindsym $mod+Return exec alacritty
 # ##############################################################################
 
 # Open application menu
-bindsym $mod+Shift+Return exec sh $HOME/.local/bin/menus/appmenu
+#bindsym $mod+Shift+Return exec sh $HOME/.local/bin/menus/appmenu
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
@@ -292,7 +292,7 @@ bindsym $mod+Mod1+semicolon focus parent; focus right
 bindsym $mod+Mod1+Right exec focus parent; focus right
 
 #personal bindings
-bindsym $mod+t exec kitty
+bindsym $mod+Shift+Return exec kitty
 bindsym $mod+b exec firefox
 
 #

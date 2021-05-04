@@ -28,7 +28,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rhysd/vim-clang-format' 
 
 "for tmux
-Plug 'christoomey/vim-tmux-navigator'
+"Plug 'christoomey/vim-tmux-navigator'
 
 "goyo 
 Plug 'junegunn/goyo.vim'
