@@ -25,6 +25,7 @@ primary              = #bdae93
 secondary            = #83a598
 alert                = #fb4934
 mycolor              = #d79921
+color0                = #000000
 
 [bar/example]
 width = 100%
@@ -99,7 +100,7 @@ label-maxlen = 100
 format-prefix = "            "
 format-prefix-underline = #292d3e
 format-underline = #e1acff
-format-foreground = ${xrdb:color0}
+format-foreground = ${colors.color0}
 format-background = ${colors.foreground-alt}
 
 [module/separatorIndent]
