@@ -171,7 +171,7 @@
     "*.rmd": "markdown",
     "stdio.h": "c"
   },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "PragmataPro Mono Liga",
   "omnisharp.useGlobalMono": "always",
   "csharp.semanticHighlighting.enabled": true,
   "workbench.statusBar.visible": false,

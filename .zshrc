@@ -12,6 +12,7 @@ fi
 export ZSH="/home/cool/.oh-my-zsh"
 export PATH="$PATH:/home/cool/bin"
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -130,6 +131,9 @@ alias i3conf="vi ~/.config/i3/config"
 alias ff="bash ~/shell-scripts/./find.sh"
 alias downwall="/home/cool/shell-scripts/./wallhaven.sh"
 alias picsho="bash ~/shell-scripts/pictures.sh"
+alias inmod="bash ~/shell-scripts/inmod"
+alias insta="bash ~/shell-scripts/insta"
+alias rm="rm -v"
 
 # Changing "ls" to "exa"
 alias l='exa -lah --color=always --group-directories-first' # my preferred listing
