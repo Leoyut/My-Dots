@@ -1,0 +1,24 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		
+	},
+	"rules":
+	[
+		{
+     		"class": "quick_panel_label",
+      		"font.face": "Roboto" // ADDED THIS LINE     
+		},
+
+		{
+             "class": "sidebar_label",
+             "font.size": 15 // ADDED THIS LINE     
+		},
+		
+		{
+			"class": "tab_label",
+			"font.size" : 15
+		},
+	]
+}

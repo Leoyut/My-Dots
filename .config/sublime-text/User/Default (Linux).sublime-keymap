@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["ctrl+shift+c"], "command": "cancel_build" },
+
+]
