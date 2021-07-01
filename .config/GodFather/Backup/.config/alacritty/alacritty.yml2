@@ -1,0 +1,92 @@
+ # Window Customization
+window:
+  #dimensions:
+    #columns: 80
+    #lines: 24
+  padding:
+    x: 24
+    y: 10
+  decorations: none
+scrolling:
+  history: 10000
+  multiplier: 3
+/*background_opacity: .90*/
+window.dynamic_title: true
+
+# Font Customization
+font:
+  normal:
+    family: PragmataPro Mono Liga
+    style: Regular
+  bold:
+    family: PragmataPro Mono Liga
+    style: Bold
+  italic:
+    family: PragmataPro Mono Liga
+    style: Italic
+  size: 11
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  use_thin_strokes: false
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+ 
+colors:
+  # Default colors
+  primary:
+    background: '0x13141d'
+    foreground: '0xcfd1dd'
+
+  # Normal colors
+  normal:
+    black:   '0x161825'
+    red:     '0xe27878'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x84a0c6'
+    magenta: '0xa093c7'
+    cyan:    '0x89b8c2'
+    white:   '0xcfd1dd'
+
+  # Bright colors
+  bright:
+    black:   '0x575b73'
+    red:     '0xe27878'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x84a0c6'
+    magenta: '0xa093c7'
+    cyan:    '0x89b8c2'
+    white:   '0xcfd1dd'
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+selection:
+    save_to_clipboard: true
+
+env:
+  # TERM env customization.
+  #
+  # If this property is not set, alacritty will set it to xterm-256color.
+  #
+  # Note that some xterm terminfo databases don't declare support for italics.
+  # You can verify this by checking for the presence of `smso` and `sitm` in
+  # `infocmp xterm-256color`.
+  TERM: xterm-256color
+
+# Spread additional padding evenly around the terminal content.
+
+dynamic_padding: false
+dynamic_title: true
+
+live_config_reload: true
+
+#no of lines - 91
+
