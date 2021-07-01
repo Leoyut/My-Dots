@@ -1,0 +1,25 @@
+#!/bin/bash
+dir=pwd
+sudo chown cool:cool ~/Pictures/root
+cd ~/shell-scripts/
+printf "Enter Your Name : "
+read id
+    sed -e "30i elif [[ \$name == \"$id\" ]]\nthen \#\npython3 main.bac.py $id \n" insta
+printf "Can i add to main : "
+read ans
+if [[ $ans=="y" || $ans=="Y" ]]
+    dir=~/Pictures/root/$id  
+then
+    mkdir ~/Pictures/root/"$id"
+    touch ~/Pictures/root/$id/testid.text
+    sed -i "30i elif [[ \$name == \"$id\" ]]\nthen \#\npython3 main.bac.py $id \n" insta
+else
+    exit 1
+fi
+cd ~/clones/Osintgram
+rm output/*
+python3 main.bac.py $id
+cp output/* ~/Pictures/root/$id
+cd $dir
+sudo chown root ~/Pictures/root
+

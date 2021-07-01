@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+d=$(pwd)
+cd /home/cool/clones/Osintgram
+ls ~/Pictures/root/
+rm -rf ~/clones/Osintgram/output/*
+read name
+cp ~/Pictures/root/$name/* ~/clones/Osintgram/output
+if [[ $name == "stranger" ]]
+then #
+    python3 main.py ankitachhetri25
+elif [[ $name == "anj" ]]
+then #
+    python3 main.py anjutk10
+elif [[ $name == "rash" ]]
+then #
+    python3 main.py rashmika_mandanna
+elif [[ $name == "jay" ]]
+then #
+    python3 main.py jayantikhatrilamba
+elif [[ $name == "ker" ]]
+then #
+    python3 main.py mirandakerr
+elif [[ $name == "wise" ]]
+then #
+    python3 main.py one_wise_life
+elif [[ $name == "mirka" ]]
+then #
+    python3 main.py mira.kapoor
+elif [[ $name == "miametzmusic" ]]
+then #
+python3 main.py miametzmusic
+else
+    exit 1
+fi
+cp ~/clones/Osintgram/output/* ~/Pictures/root/$name/ 
+cd $d

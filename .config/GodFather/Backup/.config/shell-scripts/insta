@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+d=$(pwd)
+cd /home/cool/clones/Osintgram
+sudo chown cool:cool ~/Pictures/root
+ls ~/Pictures/root/
+rm -rf ~/clones/Osintgram/output/*
+read name
+mkdir ~/Pictures/root/$name
+cp ~/Pictures/root/$name/* ~/clones/Osintgram/output
+
+if [[ $name ]]
+then #
+    python3 main.bac.py $name
+else
+    exit 1
+fi
+sudo cp ~/clones/Osintgram/output/* ~/Pictures/root/$name/ 
+cd $d
+sudo chown root ~/Pictures/root

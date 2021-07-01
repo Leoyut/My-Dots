@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+d=$(pwd)
+cd /home/cool/clones/Osintgram
+sudo chown cool:cool ~/Pictures/root
+ls ~/Pictures/root/
+rm -rf ~/clones/Osintgram/output/*
+read name
+cp ~/Pictures/root/$name/* ~/clones/Osintgram/output
+
+if [[ $name == "stranger" ]]
+then #
+    python3 main.bac.py ankitachhetri25
+
+elif [[ $name == "anj" ]]
+then #
+    python3 main.bac.py anjutk10
+
+elif [[ $name == "rash" ]]
+then #
+    python3 main.bac.py rashmika_mandanna
+
+elif [[ $name == "jay" ]]
+then #
+    python3 main.bac.py jayantikhatrilamba
+
+elif [[ $name == "ker" ]]
+then #
+    python3 main.bac.py mirandakerr
+
+elif [[ $name == "klarap4" ]]
+then #
+python3 main.bac.py klarap4 
+
+elif [[ $name == "handemiyy" ]]
+then #
+python3 main.bac.py handemiyy 
+
+elif [[ $name == "handemiyy" ]]
+then #
+python3 main.bac.py handemiyy 
+
+elif [[ $name == "anchor_manjusha" ]]
+then #
+python3 main.bac.py anchor_manjusha 
+
+elif [[ $name == "k7_aphrolin" ]]
+then #
+python3 main.bac.py k7_aphrolin 
+
+elif [[ $name == "wise" ]]
+then #
+    python3 main.bac.py one_wise_life
+
+elif [[ $name == "mirka" ]]
+then #
+    python3 main.bac.py mira.kapoor
+
+elif [[ $name == "miametzmusic" ]]
+then #
+python3 main.bac.py miametzmusic
+
+else
+    exit 1
+fi
+cp ~/clones/Osintgram/output/* ~/Pictures/root/$name/ 
+cd $d
+sudo chown root ~/Pictures/root

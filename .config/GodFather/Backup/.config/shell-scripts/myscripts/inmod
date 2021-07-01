@@ -1,0 +1,23 @@
+#!bin/bash
+printf '1)Pic/stranger\n2)Pic/jok\n3)Pic/anj\n4)Pic/rash\n5)Vid/rash'
+echo ""
+printf "Option : "
+read -r  b 
+if (( b  == 1 ))
+then
+    sudo sxiv ~/Pictures/root/stranger/
+elif(( b  == 2 ))
+then 
+    sudo sxiv ~/Pictures/root/jok/
+elif(( b  == 3 ))
+then 
+    sudo sxiv ~/Pictures/root/anj/
+elif(( b  == 4 ))
+then 
+    sudo sxiv ~/Pictures/root/rash/
+elif(( b  == 5 ))
+then 
+    sudo mpv ~/Videos/root/rash/
+else
+    exit 0
+fi

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+sudo chown cool:cool ~/Pictures/root 
+if [[ "$2"  ]]
+then
+    mpv ~/Pictures/root/*$1*/.
+elif [[ $1 ]]
+then
+sxiv -o -q -b ~/Pictures/root/*$1*/ 
+else
+ls ~/Pictures/root/
+read name
+sxiv -o -q -b ~/Pictures/root/*$name*/ 
+fi
+sudo chown root ~/Pictures/root 
+clear
