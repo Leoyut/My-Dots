@@ -2,7 +2,7 @@
 {
 	"variables":
 	{
-		
+		"font.size": 18,
 	},
 	"rules":
 	[
@@ -13,12 +13,12 @@
 
 		{
              "class": "sidebar_label",
-             "font.size": 15 // ADDED THIS LINE     
+             "font.size": 18 // ADDED THIS LINE     
 		},
 		
 		{
 			"class": "tab_label",
-			"font.size" : 15
+			"font.size" : 16
 		},
 	]
 }
