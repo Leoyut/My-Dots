@@ -209,8 +209,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
  assign [class=firefox|Org.gnome.Nautilus|chrome] $ws2
  assign [class=Chromium|obs|SimpleScreenRecorder|Teams] $ws3
  assign [class=Code|Subl] $ws4
- assign [class=discord] $ws5
- assign [class=Smerge] $ws7
+ assign [class=Spotify] $ws6
+ assign [class=discord] $ws7
+ assign [class=Smerge] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

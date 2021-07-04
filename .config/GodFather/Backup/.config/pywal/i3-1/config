@@ -213,11 +213,14 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
  assign [class=firefox|Org.gnome.Nautilus] $ws2
  assign [class=Chromium|chrome|obs|SimpleScreenRecorder|Teams] $ws3
  assign [class=Code] $ws4
- assign [class=discord|Spotify] $ws6
+ assign [class=Spotify] $ws6
+ assign [class=discord] $ws7
+ assign [class=Smerge] $ws8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 for_window [class="Spotify"] move to workspace $ws6
+for_window [class="Smerge"] move to workspace $ws8
 #for_window [class=Spotify|Chromium|firefox|obs|SimpleScreenRecorder|discord|Org.gnome.Nautilus] focus
 
 # Open specific applications in floating mode
