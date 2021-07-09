@@ -100,8 +100,8 @@ exec_always --no-startup-id autotiling
 #bindsym $mod+Shift+Return exec sh $HOME/.local/bin/menus/appmenu
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
+bindsym $alt+q exec --no-startup-id rofi -show run
+bindsym $alt+Shift+q exec --no-startup-id rofi -show drun
 
 # Open eww
 bindsym $mod+p exec sh $HOME/.local/bin/dshbrd open
