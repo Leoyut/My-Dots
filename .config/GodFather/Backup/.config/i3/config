@@ -87,7 +87,7 @@ exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id picom -CGb
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id hsetroot -fill "$HOME/Pictures/Wallpapers/darkarch.png"
+exec_always --no-startup-id hsetroot -fill "$HOME/Pictures/Wallpapers/lightarch.png"
 exec_always --no-startup-id xsettingsd
 exec_always --no-startup-id sh $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
@@ -139,7 +139,8 @@ bindsym $mod+Shift+Right move right
 #bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
+bindsym $mod+f focus parent; fullscreen; focus child
 
 # Better fullscreen but can see window
 bindsym $alt+f exec sh $HOME/.local/bin/tglbar hide
@@ -279,10 +280,10 @@ bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t ima
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $alt+h move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+minus scratchpad show
+bindsym $alt+Shift+h scratchpad show
 
 #focus parent and move left/right
 bindsym $mod+Mod1+j focus parent; focus left
